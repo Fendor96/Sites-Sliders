@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #000;
+    color: #eee;
+    margin: 0;
+    font-size: 12px;
+}
+
+.active{
+    color: #f1683a;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative; /* it is used for reviewing the header after the top position of the imaages couple with the Z-index*/
+    z-index: 100;
+    font-size: 18px;
+}
+
+header a {
+    margin-right: 20px;
+}
+
+header a:hover {
+    cursor: pointer;
+    color: #f1683a;
+    transition: 0.5s ease-in-out;
+}
+
+/**** Fin du header ********/
+
+.bg_image {
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+    margin-top: -50px;
+    background: url('./assets/personnel_2.jpeg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg_image .text{
+    background-color: rgba(255, 249, 249, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    margin: auto 10%;
+}
+
+.bg_image h1 {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-family: Poppins, sans-serif;   
+}
+
+.bg_image p{
+    margin: 0 auto;
+    width: 65%;
+    color: #f1683a;
+    font-size: 3vh;
+    font-family:Popins, sans-serif;
+    font-weight: 500;
+    letter-spacing: 3px;
+}
+
+/**************** DEBUT EXPLAIN***********/
+
+.explain{
+    color: #eee;
+    margin-top:  -20px;
+    text-align: center;
+    font-size: 20px;
+    background-color: #f1683a;
+}
+
+.explain_img{
+    width: 50vw;
+    height: 50vh;
+    overflow: hidden;
+    position: absolute;
+    left: -10%;
+}
+
+/* FORMULAIRE*/
+
+.contain_form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto;
+}
+
+.formulaire{
+    width: 30vw;
+    box-sizing: border-box;
+    padding: 15px 18px;
+    border: 2px #f1683a solid;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.formulaire h3{
+    text-align: center;
+    font-size: 20px;
+    color: #f1683a;
+}
+
+.formulaire label {
+    color: #f1683a;
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.formulaire input{
+    padding: 10px;
+    width: 25vw;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+
+.formulaire textarea {
+    border-radius: 20px;
+    width: 26vw;
+}
+
+.formulaire button{
+    width: 10vw;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #f1683a;
+    font-family: cursive;
+    margin-top: 10px;
+}
+
+.formulaire button:hover{
+    cursor: pointer;
+    background-color: #f1683a;
+    color: white;
+    transition: 0.5s ease-in-out;
+
+}
+
+@media  screen and (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .desactiveBurger{
+        display: none;
+    }
+
+    .activeBurger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -15%;
+        top: 10px;
+        z-index: 10;
+        color: #f1683a;
+        font-size: 30px;
+        height: 80vh;
+        width: 100vw;
+        margin: 5px;
+        background-color: rgba(255, 85, 0, 0.765);
+        transition: .3s ease-in-out;
+        opacity: 0;
+        transform: translateX(100px);
+        animation: slid-in 0.5s ease-in-out forwards;
+    }
+
+    #menuBTN{
+        z-index: 20;
+        position: relative;
+        margin: 10px auto;
+    }
+
+    .activist{
+        color: #000;
+    }
+
+    @keyframes slid-in{
+        to{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes slid-out{
+        to{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+    }
+
+    .slid-out{
+        animation: slid-out 1s ease-in-out forwards;
+    }
+
+
+    #menuBTN{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 10vw;
+        background-color: transparent;
+        font-size: 3vh;
+        border: none;
+        color: #f1683a;
+    }
+
+    .intro_txt{
+        font-size: 10px;
+        letter-spacing: 0px !important;
+    }
+    .tarifs{
+        overflow: scroll;
+    }
+    .boxes{
+        height: 40vh;
+        width: 50vw;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+    .tarifs .boxes {
+        border: 1px solid #f1683a;
+        margin: 10px;
+        padding: 5px 8px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .boxes span{
+        font-size: 3vh !important;
+    }
+
+    .tarifs .boxes ol li {
+        line-height: 15.5px !important;
+        text-align: center;
+        margin-left: -12px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .bg_image h1{
+        font-size: 30px;
+    }
+
+    .bg_image p{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+
+    .formulaire{
+        width: 90vw;
+        margin: 10px auto;
+    }
+
+    .formulaire input, .formulaire textarea{
+        font-size: 15px;
+        width: 80%;
+        background-color: transparent;
+        border: none;
+        margin: 10px auto;
+        border-bottom: 1px dashed #f1683a;
+        color: white;
+
+    }
+
+    .formulaire button{
+        width: 40%;
+        margin: 10px auto;
+    }
+}
+
+/*FOOTER*/
+
+footer {
+    border-top: 1px #f1683a solid;
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+    margin-top: 20px;
+    color: #f1683a;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #f1683a;
+}
+
+footer h2{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.container_list{
+    display: flex;
+    padding: 10px;
+}
+
+.question_list{
+
+    border-right: 1px #eee solid;
+    padding: 10px;
+}
+
+.questions{
+
+}
+
+.questions h3{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.adress{
+    margin: 10px;
+    left: 80%;
+    border-top: 2px solid #eee;
+    padding: 10px;
+}
+
+.reseaux{
+    margin: 10px;
+    border-top: 2px solid #eee;
+    font-size: 20px;
+    padding: 10px;
+}
+
+.reseaux .icons ul a i{
+    color: #f1683a;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reseaux .icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reseaux .icons ul a i:hover {
+
+    color: #eee;
+    text-decoration: underline;
+    font-size: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.copyright{
+    text-align: center;
+}

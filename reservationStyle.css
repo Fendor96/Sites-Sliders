@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    background-color: #000;
+    color: #eee;
+    margin: 0;
+    font-size: 12px;
+}
+
+.active{
+    color: #f1683a;
+}
+
+a{
+    text-decoration: none;
+    color: #eee;
+}
+
+header {
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative; /* it is used for reviewing the header after the top position of the imaages couple with the Z-index*/
+    z-index: 100;
+    font-size: 18px;
+}
+
+header a {
+    margin-right: 20px;
+}
+
+header a:hover {
+    cursor: pointer;
+    color: #f1683a;
+    transition: 0.5s ease-in-out;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+#menuBTN{
+    display: none;
+}
+
+
+
+/**** Fin du header ********/
+
+@media  screen and (max-width: 768px) {
+
+    nav{
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+    .desactiveBurger{
+        display: none;
+    }
+
+    .activeBurger{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: -15%;
+        top: 10px;
+        z-index: 10;
+        color: #f1683a;
+        font-size: 30px;
+        height: 80vh;
+        width: 100vw;
+        margin: 5px;
+        background-color: rgba(255, 85, 0, 0.765);
+        transition: .3s ease-in-out;
+        opacity: 0;
+        transform: translateX(100px);
+        animation: slid-in 0.5s ease-in-out forwards;
+    }
+
+    #menuBTN{
+        z-index: 20;
+        position: relative;
+        margin: 10px auto;
+    }
+
+    .activist{
+        color: #000;
+    }
+
+    @keyframes slid-in{
+        to{
+            transform: translateX(0px);
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes slid-out{
+        to{
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+    }
+
+    .slid-out{
+        animation: slid-out 1s ease-in-out forwards;
+    }
+
+
+    #menuBTN{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 10vw;
+        background-color: transparent;
+        font-size: 3vh;
+        border: none;
+        color: #f1683a;
+    }
+
+    .intro_txt{
+        font-size: 10px;
+        letter-spacing: 0px !important;
+    }
+    .tarifs{
+        overflow: scroll;
+    }
+    .boxes{
+        height: 40vh;
+        width: 50vw;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+    .tarifs .boxes {
+        border: 1px solid #f1683a;
+        margin: 10px;
+        padding: 5px 8px;
+        box-sizing: border-box;
+        border-radius: 10px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .boxes span{
+        font-size: 3vh !important;
+    }
+
+    .tarifs .boxes ol li {
+        line-height: 15.5px !important;
+        text-align: center;
+        margin-left: -12px;
+    }
+}
+    
+
+
+.title {
+    background-color: #f1683a;
+    padding: 15px 18px;
+    margin: 10px;
+    text-align: center;
+}
+
+.intro_txt{
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+.intro{
+
+}
+
+.intro h2{
+    letter-spacing: 10px;
+    color: #f1683a;
+    text-align: center;
+    font-size: 20px;
+}
+
+.tarifs {
+    display: flex ;
+}
+
+.tarifs .boxes {
+    flex: 1;
+    border: 1px solid #f1683a;
+    margin: 10px;
+    padding: 15px 18px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.tarifs .boxes span {
+
+    color: #f1683a;
+    font-size: 30px;
+}
+
+.tarifs .boxes button{
+    padding: 10px;
+    box-sizing: border-box;
+    color: #eee;
+    background-color: #f1683a;
+    border: none;
+    width: 10vw;
+    border-radius: 10px;
+}
+
+.tarifs .boxes button:hover{
+    color: #f1683a;
+    background-color: #eee;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.tarifs .boxes ol li {
+    line-height: 40.5px;
+}
+
+.tarifs .boxes .textt{
+    background-color: #f1683a;
+    width: 100%;
+}
+
+.tarifs .boxes.standard ol li:nth-child(3), .tarifs .boxes.standard ol li:nth-child(4){
+    text-decoration-line: line-through;
+}
+
+.tarifs .boxes.medium ol li:nth-child(3){
+    text-decoration-line: line-through;
+}
+/*SUIVANT*/
+
+.next {
+    width: 100%;
+    color: #f1683a;
+    padding: 15px 18px;
+    box-sizing: border-box;
+    margin: 10px 0px;
+    background-color: #f1683ab0;
+}
+
+.next a{
+    border: none;
+    color: #eee;
+    padding: 15px 18px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+}
+
+.next a:hover{
+    text-decoration: underline;
+}
+
+/*FOOTER*/
+
+footer {
+    border-top: 1px #f1683a solid;
+    background-color: rgb(0, 0, 0);
+    font-family: cursive;
+    margin-top: 20px;
+    color: #f1683a;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #f1683a;
+}
+
+footer h2{
+    text-align: center;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.container_list{
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.question_list{
+
+    border-right: 1px #eee solid;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.questions{
+
+}
+
+.questions h3{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.adress{
+    margin: 10px;
+    left: 80%;
+    border-top: 2px solid #eee;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reseaux{
+    margin: 10px;
+    border-top: 2px solid #eee;
+    font-size: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reseaux .icons ul a i{
+    color: #f1683a;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.reseaux .icons {
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.reseaux .icons ul a i:hover {
+
+    color: #eee;
+    text-decoration: underline;
+    font-size: 25px;
+    transition: 0.5s ease-in-out;
+}
+
+.copyright{
+    text-align: center;
+}
