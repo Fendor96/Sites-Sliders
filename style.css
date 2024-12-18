@@ -8,6 +8,14 @@ body {
     font-size: 12px;
 }
 
+.hamburger-menu {
+    display: none;
+}
+
+#menuBTN{
+    display: none;
+}
+
 .active{
     color: #f1683a;
 }
